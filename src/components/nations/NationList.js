@@ -25,7 +25,10 @@ export class NationList extends Component {
             <div className="main-container">
                 <div className="interactions-container">
                     <SearchBar onTermSubmit={this.onTermSubmit}/>
-                    <FilterDropdown />
+                    <FilterDropdown 
+                        title="Filter by Region"
+                        list={["Africa", "Americas", "Asia", "Europe", "Oceania"]}
+                    />
                 </div>
 
                 <div className="cards-container">
