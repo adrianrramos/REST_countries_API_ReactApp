@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import nations from '../../apis/nations';
 
-import SearchBar from '../SearchBar';
+import SearchBar from '../index/SearchBar';
 import FilterDropdown from '../dropdown/FilterDropdown';
-import Card from '../Card';
+import Card from '../index/Card';
 
 export class NationList extends Component {
     state = {
