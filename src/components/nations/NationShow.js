@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import nations from '../../apis/nations';
 import history from '../../history';
+import ShowInfo from '../ShowInfo';
 
 export class NationShow extends Component {
     state = {}
@@ -54,90 +55,19 @@ export class NationShow extends Component {
                 <button onClick={() => history.push("/")}>
                     Go Back
                 </button>
-                <div>
-                    <div>
-                        <img src={flag} alt={name}></img>
-                    </div>
-                    <div>
-                        <h1>{name}</h1>
-                        <div>
-                            <ul>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Native Name:
-                                        </strong>
-                                        {nativeName}
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Population:
-                                        </strong>
-                                        {population}
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Region:
-                                        </strong>
-                                        {region}
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Sub Region:
-                                        </strong>
-                                        {subregion}
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Capital:
-                                        </strong>
-                                        {capital}
-                                    </p>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Top Level Domain:
-                                        </strong>
-                                        {topLevelDomain}
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Currencies:
-                                        </strong>
-                                        {this.renderCurrencies(currencies)}
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <strong>
-                                            Languages:
-                                        </strong>
-                                        {this.renderLanguages(languages)}
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>
-                                Border Countries: 
-                            </h4>
-
-                        </div>
-                    </div>
-                </div>
+                <ShowInfo 
+                    flag={flag}
+                    name={name}
+                    nativeName={nativeName}
+                    population={population}
+                    region={region}
+                    subregion={subregion}
+                    capital={capital}
+                    topLevelDomain={topLevelDomain}
+                    currencies={currencies}
+                    languages={languages}
+                    borders={borders}
+                />
             </div>
         )
     }

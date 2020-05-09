@@ -4,9 +4,7 @@ import nations from '../../apis/nations';
 import Card from '../Card';
 
 export class NationList extends Component {
-    state = {
-        nations: []
-    }
+    state = {};
 
     componentDidMount() {
         nations.get('/v2/all')
