@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({
     flag,
@@ -6,6 +7,7 @@ const Card = ({
     population,
     region,
     capital,
+    nationId
 }) => {
     return (
         <div>
@@ -17,9 +19,11 @@ const Card = ({
                     height: 'auto'
                 }}
             />
-            <h1>
-                {name}
-            </h1>
+            <Link to={`/nation/${nationId}`}>
+                <h1>
+                    {name}
+                </h1>
+            </Link>
             <div>
                 <h4>
                     Population: 

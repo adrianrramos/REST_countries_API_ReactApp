@@ -15,12 +15,11 @@ export class NationList extends Component {
     };
 
     render() {
-        console.log(this.state.nations[0]);
         return (
             <div>
                 {
                     this.state.nations && this.state.nations.map(nation => {
-
+                        console.log()
                         return (
                             <Card 
                                 key={nation.numericCode}
@@ -29,6 +28,7 @@ export class NationList extends Component {
                                 population={nation.population}
                                 region={nation.region}
                                 capital={nation.capital}
+                                nationId={nation.callingCodes[0]}
                             />
                         )
                     })
