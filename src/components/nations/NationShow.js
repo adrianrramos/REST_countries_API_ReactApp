@@ -14,22 +14,6 @@ export class NationShow extends Component {
             .catch(error => console.log(error));
     };
 
-    renderLanguages = (languages) => {
-        let outputList = [];
-        languages.forEach(language => {
-            return outputList.push(language.name);
-        })
-        return outputList.join(", ");
-    };
-
-    renderCurrencies = (currencies) => {
-        let outputList = [];
-        currencies.forEach(currency => {
-            return outputList.push(currency.name);
-        })
-        return outputList.join(", ");
-    };
-
     render() {
         if (!this.state.nation) {
             return <div>Loading....</div>
