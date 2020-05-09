@@ -7,9 +7,9 @@ export class NationShow extends Component {
     state = {}
 
     componentDidMount() {
-        const { id } = this.props.match.params;
+        const { name } = this.props.match.params;
 
-        nations.get(`callingcode/${id}`)
+        nations.get(`name/${name}`)
             .then(response => this.setState({ nation: response.data[0] }))
             .catch(error => console.log(error));
     };

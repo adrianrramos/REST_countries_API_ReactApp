@@ -12,7 +12,7 @@ export class App extends Component {
             <Router history={history}>
                 <Header />
                 <Route path="/" component={NationList}  exact/>
-                <Route path="/nation/:id" component={NationShow}  exact/>
+                <Route path="/nation/:name" component={NationShow}  exact/>
             </Router>
         )
     }

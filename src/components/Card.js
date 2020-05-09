@@ -20,7 +20,7 @@ const Card = ({
                     height: 'auto'
                 }}
             />
-            <Link to={`/nation/${nationId}`} className="card-link">
+            <Link to={`/nation/${name}`} className="card-link">
                 <h1 className="card-title">
                     {name}
                 </h1>
