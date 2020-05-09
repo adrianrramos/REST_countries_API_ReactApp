@@ -12,13 +12,18 @@ export class NationList extends Component {
 
     componentDidMount = async () => {
         const response = await nations.get('all');
-        this.setState({ nations: response.data})
+        this.setState({ nations: response.data});
     };
 
     onTermSubmit = async term => {
         const response = await nations.get(`name/${term}`);
         this.setState({ nations: response.data });
     }
+
+    onClickFilter = async (region) => {
+        const response = await nations.get(`region/${region}`);
+        this.setState({ nations: response.data});
+    };
 
     render() {
         return (
@@ -28,6 +33,7 @@ export class NationList extends Component {
                     <FilterDropdown 
                         title="Filter by Region"
                         list={["Africa", "Americas", "Asia", "Europe", "Oceania"]}
+                        onClickFilter={this.onClickFilter}
                     />
                 </div>
 

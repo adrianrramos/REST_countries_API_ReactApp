@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
-import * as handleClickOutside from "react-onclickoutside";
 
 
 export class FilterDropdown extends Component {
-    constructor(props){
-        super(props)
-
-        this.state = {
+    state = {
           listOpen: false,
           headerTitle: this.props.title
-        }
     }
 
     handleClickOutside(){
@@ -19,11 +14,17 @@ export class FilterDropdown extends Component {
         })
       };
 
-      toggleList(){
-        this.setState(prevState => ({
-          listOpen: !prevState.listOpen
-        }))
-      };
+
+
+    toggleList(){
+      this.setState(prevState => ({
+        listOpen: !prevState.listOpen
+      }))
+    };
+
+    handleFilterClick = (region) => {
+      this.props.onClickFilter(region)
+    };
 
     render() {
         const { list } = this.props;
@@ -39,7 +40,7 @@ export class FilterDropdown extends Component {
                 </div>
                 {listOpen && <ul className="dd-list">
                         {list.map(item => (
-                            <li className="dd-list-item" key={item} >{item}</li>
+                            <li className="dd-list-item" key={item} onClick={() => this.handleFilterClick(item)}>{item}</li>
                         ))}
                     </ul>}
             </div>
