@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import nations from '../../apis/nations';
 
 import SearchBar from '../SearchBar';
-import FilterDropdown from '../FilterDropdown';
+import FilterDropdown from '../dropdown/FilterDropdown';
 import Card from '../Card';
 
 export class NationList extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import nations from '../apis/nations';
+import nations from '../../apis/nations';
 
 export class BordersDetail extends Component {
     state = {

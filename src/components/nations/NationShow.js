@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import nations from '../../apis/nations';
 import history from '../../history';
-import ShowInfo from '../ShowInfo';
+import ShowInfo from '../show/ShowInfo';
 
 export class NationShow extends Component {
     state = {}

@@ -4,7 +4,7 @@ import history from '../history';
 
 import NationList from './nations/NationList';
 import NationShow from './nations/NationShow';
-import Header from './Header';
+import Header from './partials/Header';
 
 export class App extends Component {
     render() {
