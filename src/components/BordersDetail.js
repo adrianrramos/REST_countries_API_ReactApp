@@ -33,4 +33,4 @@ export class BordersDetail extends Component {
     };
 };
 
-export default BordersDetail
+export default BordersDetail;
