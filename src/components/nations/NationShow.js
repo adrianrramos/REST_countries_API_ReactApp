@@ -9,17 +9,9 @@ export class NationShow extends Component {
     componentDidMount() {
         const { id } = this.props.match.params;
 
-        nations.get(`https://restcountries.eu/rest/v2/callingcode/${id}`)
+        nations.get(`callingcode/${id}`)
             .then(response => this.setState({ nation: response.data[0] }))
             .catch(error => console.log(error));
-    };
-
-    renderCurrencies = (currencies) => {
-        let outputList = [];
-        currencies.forEach(currency => {
-            return outputList.push(currency.name);
-        })
-        return outputList.join(", ");
     };
 
     render() {
@@ -42,8 +34,8 @@ export class NationShow extends Component {
         } = this.state.nation;
 
         return (
-            <div>
-                <button onClick={() => history.push("/")}>
+            <div className="showPage-container">
+                <button onClick={() => history.push("/")} className="goback-btn">
                     Go Back
                 </button>
                 <ShowInfo 

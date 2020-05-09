@@ -10,8 +10,9 @@ const Card = ({
     nationId
 }) => {
     return (
-        <div>
+        <div className="card-body">
             <img 
+                className="card-image"
                 src={flag} 
                 alt={name}
                 style={{
@@ -19,32 +20,32 @@ const Card = ({
                     height: 'auto'
                 }}
             />
-            <Link to={`/nation/${nationId}`}>
-                <h1>
+            <Link to={`/nation/${nationId}`} className="card-link">
+                <h1 className="card-title">
                     {name}
                 </h1>
             </Link>
-            <div>
-                <h4>
+            <div className="card-content-row">
+                <h4 className="card-content-label">
                     Population: 
                 </h4>
-                <p>
+                <p className="card-content-text">
                     {population}
                 </p>
             </div>
-            <div>
-                <h4>
+            <div className="card-content-row">
+                <h4 className="card-content-label">
                     Region:
                 </h4>
-                <p>
+                <p className="card-content-text">
                     {region}
                 </p>
             </div>
-            <div>
-                <h4>
+            <div className="card-content-row">
+                <h4 className="card-content-label">
                     Capital: 
                 </h4>
-                <p>
+                <p className="card-content-text">
                     {capital || 'Not Found'}
                 </p>
             </div>
