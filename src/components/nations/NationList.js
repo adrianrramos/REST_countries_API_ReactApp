@@ -25,6 +25,10 @@ export class NationList extends Component {
         this.setState({ nations: response.data});
     };
 
+    renderNumber = (number) => {
+            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+
     render() {
         return (
             <div className="main-container">
@@ -43,7 +47,7 @@ export class NationList extends Component {
                                     key={nation.numericCode}
                                     flag={nation.flag}
                                     name={nation.name}
-                                    population={nation.population}
+                                    population={this.renderNumber(nation.population)}
                                     region={nation.region}
                                     capital={nation.capital}
                                     nationId={nation.callingCodes[0]}

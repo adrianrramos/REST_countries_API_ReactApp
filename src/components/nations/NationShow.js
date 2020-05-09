@@ -14,6 +14,26 @@ export class NationShow extends Component {
             .catch(error => console.log(error));
     };
 
+    renderLanguages = (languages) => {
+        let outputList = [];
+        languages.forEach(language => {
+            return outputList.push(language.name);
+        })
+        return outputList.join(", ");
+    };
+
+    renderCurrencies = (currencies) => {
+        let outputList = [];
+        currencies.forEach(currency => {
+            return outputList.push(currency.name);
+        })
+        return outputList.join(", ");
+    };
+
+    renderNumber = (number) => {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+
     render() {
         if (!this.state.nation) {
             return <div>Loading....</div>
@@ -42,13 +62,13 @@ export class NationShow extends Component {
                     flag={flag}
                     name={name}
                     nativeName={nativeName}
-                    population={population}
+                    population={this.renderNumber(population)}
                     region={region}
                     subregion={subregion}
                     capital={capital}
                     topLevelDomain={topLevelDomain}
-                    currencies={currencies}
-                    languages={languages}
+                    currencies={this.renderCurrencies(currencies)}
+                    languages={this.renderLanguages(languages)}
                     borders={borders}
                 />
             </div>
