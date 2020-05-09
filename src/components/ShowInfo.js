@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BordersDetail from './BordersDetail';
 
 class ShowInfo extends Component{
     renderLanguages = (languages) => {
@@ -109,12 +110,7 @@ class ShowInfo extends Component{
                                     </li>
                                 </ul>
                             </div>
-                            <div>
-                                <h4>
-                                    Border Countries: 
-                                </h4>
-    
-                            </div>
+                            <BordersDetail borders={borders}/>
                         </div>
                     </div>
             </div>

@@ -14,6 +14,14 @@ export class NationShow extends Component {
             .catch(error => console.log(error));
     };
 
+    renderCurrencies = (currencies) => {
+        let outputList = [];
+        currencies.forEach(currency => {
+            return outputList.push(currency.name);
+        })
+        return outputList.join(", ");
+    };
+
     render() {
         if (!this.state.nation) {
             return <div>Loading....</div>
@@ -32,8 +40,7 @@ export class NationShow extends Component {
             languages,
             borders
         } = this.state.nation;
-        
-        console.log(currencies)
+
         return (
             <div>
                 <button onClick={() => history.push("/")}>
