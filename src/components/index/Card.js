@@ -43,7 +43,7 @@ const Card = ({
                         Capital: 
                     </h4>
                     <p className="card-content-text">
-                        {capital || 'Not Found'}
+                        {capital || 'Undeclared*'}
                     </p>
                 </div>
             </div>

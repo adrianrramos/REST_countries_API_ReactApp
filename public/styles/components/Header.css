@@ -1,0 +1,21 @@
+.header-conainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw 0 2vw;
+    margin-bottom: 2.5vw;
+    background-color: white;
+    box-shadow: 1px 1px 10px hsl(0, 0%, 90%);
+}
+
+.darkmode-box {
+    display: flex;
+    font-weight: 600;
+}
+
+.fa-moon {
+    margin: auto 0;
+}
+
+.darkmode-text {
+    margin: auto 1vw auto .3vw;
+}

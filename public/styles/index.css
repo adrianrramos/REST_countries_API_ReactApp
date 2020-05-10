@@ -1,11 +1,13 @@
 @import './components/Card.css';
 @import './components/Interactions.css';
+@import './components/Header.css';
 
 * {
-    /* border: .5px solid black; */
+    /* border: .5px solid black;s */
 }
 
 body {
     background-color: hsl(0, 0%, 98%);
     font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
 }
