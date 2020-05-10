@@ -1,4 +1,4 @@
-.header-conainer {
+.header-container {
     display: flex;
     justify-content: space-between;
     padding: 0 2vw 0 2vw;
@@ -18,4 +18,18 @@
 
 .darkmode-text {
     margin: auto 1vw auto .3vw;
+}
+
+@media only screen and (max-width: 400px) {
+    .header-container {
+        padding: 5vw 4vw 5vw 4vw;
+    }
+
+    .header-title {
+        font-size: 5vw;
+    }
+
+    .darkmode-text {
+        margin: auto 2vw auto 2vw;
+    }
 }

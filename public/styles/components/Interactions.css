@@ -31,7 +31,7 @@
 }
 
 .search-input-field::placeholder {
-    color: hsl(0, 0%, 65%);
+    color: hsl(0, 0%, 70%);
 }
 
 .search-input-field:focus {
@@ -42,7 +42,7 @@
     width: 15%;
     background-color: white;
     border: none;
-    color: hsl(0, 0%, 65%);
+    color: hsl(0, 0%, 70%);
     font-size: 1vw;
     border-radius: 5px;
 }
@@ -126,14 +126,72 @@
     }
 
     .dd-header {
+        width: 20vw;
         height: 50%;
         margin: auto 5.5vw auto 0;
         font-size: 1.5vw;
+    }
+
+    .dd-list {
+        margin-left: -5.5vw;
+        width: 20vw;
+        margin-top: 12vw;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .interactions-container {
         flex-direction: column;
+    }
+
+    .search-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-form {
+        width: 90%;
+        height: 15vw;
+    }
+
+    .search-input-field {
+        font-size: 4.5vw;
+    }
+
+    .search-submit-btn {
+        font-size: 4.5vw;
+    }
+
+    .dd-wrapper {
+        width: 90%;
+        height: 14vw;
+        margin: 3.5vw;
+        margin-left: 4vw;
+        justify-content: start;
+
+    }
+
+    .dd-header {
+        padding: 0 3vw 0 3vw;
+        height: 100%;
+        width: 50%;
+        font-size: 4vw;
+        justify-content: space-between;
+    }
+
+    .dd-list {
+        margin-left: 0;
+        margin-top: 16vw;
+        padding-left: 3vw;
+        padding-top: 1.5vw;
+        width: 48%;
+    }
+
+    .dd-list-item {
+        padding: 1.5vw 0 1.5vw 0;
+    }
+
+    .dd-arrows {
+        font-size: 3.75vw;
     }
 }

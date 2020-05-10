@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div className="header-conainer">
+        <div className="header-container">
             <div className="header-title-box">
                 <h1 className="header-title">
                     Where in the world?

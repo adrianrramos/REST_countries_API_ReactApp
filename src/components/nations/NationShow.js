@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import nations from '../../apis/nations';
-import history from '../../history';
+import { Link } from 'react-router-dom';
 import ShowInfo from '../show/ShowInfo';
 
 export class NationShow extends Component {
@@ -55,9 +55,9 @@ export class NationShow extends Component {
 
         return (
             <div className="showPage-container">
-                <button onClick={() => history.push("/")} className="goback-btn">
+                <Link to="/" className="goback-btn">
                     Go Back
-                </button>
+                </Link>
                 <ShowInfo 
                     flag={flag}
                     name={name}
