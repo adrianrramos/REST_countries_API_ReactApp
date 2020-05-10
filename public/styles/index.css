@@ -1,4 +1,5 @@
 @import './components/Card.css';
+@import './components/Interactions.css';
 
 * {
     /* border: .5px solid black; */

@@ -16,8 +16,12 @@ export class NationList extends Component {
     };
 
     onTermSubmit = async term => {
-        const response = await nations.get(`name/${term}`);
-        this.setState({ nations: response.data });
+        try {
+            const response = await nations.get(`name/${term}`);
+            this.setState({ nations: response.data, error: false });
+        } catch (error) {
+            this.setState({ error: true, nations: [] })
+        }
     }
 
     onClickFilter = async (region) => {
@@ -30,6 +34,7 @@ export class NationList extends Component {
     };
 
     render() {
+
         return (
             <div className="main-container">
                 <div className="interactions-container">
@@ -44,15 +49,16 @@ export class NationList extends Component {
                 <div className="cards-container">
                     {this.state.nations && this.state.nations.map(nation => {
                         return  <Card 
-                                    key={nation.numericCode}
-                                    flag={nation.flag}
-                                    name={nation.name}
-                                    population={this.renderNumber(nation.population)}
-                                    region={nation.region}
-                                    capital={nation.capital}
-                                    nationId={nation.callingCodes[0]}
-                                />;
+                        key={nation.numericCode}
+                        flag={nation.flag}
+                        name={nation.name}
+                        population={this.renderNumber(nation.population)}
+                        region={nation.region}
+                        capital={nation.capital}
+                        nationId={nation.callingCodes[0]}
+                        />;
                     })}
+                    {this.state.error ? <h1 style={{paddingLeft: "2vw"}}>Sorry, we couldn't find any countries with that name</h1> : false}
                 </div>
             </div>
         );

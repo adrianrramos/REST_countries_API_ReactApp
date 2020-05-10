@@ -2,6 +2,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    z-index: -1;
 }
 
 .card-body {
@@ -60,7 +61,7 @@
     margin-right: .5vw;
 }
 
-@media only screen and (max-width: 900px)  {
+@media only screen and (max-width: 1000px)  {
     .cards-container {
         grid-template-columns: auto auto;
     }

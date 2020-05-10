@@ -15,8 +15,8 @@ export class SearchBar extends Component {
         return (
             <div className="search-container">
                 <form className="search-form" onSubmit={(e) => this.onSearchSubmit(e)}>
-                    <input type="text" className="search-input" value={this.state.term} onChange={(e) => this.setState({ term: e.target.value })}/>
-                    <input type="submit" className="search-submit"/>
+                    <input type="text" className="search-input-field" value={this.state.term} placeholder="Search for a country..." onChange={(e) => this.setState({ term: e.target.value })}/>
+                    <button type="submit" className="search-submit-btn"><i className="fas fa-search"></i></button>
                 </form>
             </div>
         )

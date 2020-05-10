@@ -1,0 +1,82 @@
+.interactions-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* SEARCH BAR */
+
+.search-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.search-form {
+    width: 70%;
+    height: 3.5vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    margin-left: 2vw;
+    box-shadow: 1px 1px 25px hsl(0, 0%, 93%);
+}
+
+.search-input-field {
+    width: 85%;
+    border: none;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.search-input-field::placeholder {
+    color: hsl(0, 0%, 65%);
+}
+
+.search-input-field:focus {
+    outline: none;
+}
+
+.search-submit-btn {
+    width: 15%;
+    background-color: white;
+    border: none;
+    color: hsl(0, 0%, 65%);
+    font-size: 1vw;
+}
+
+.search-submit-btn:focus {
+    outline: none;
+}
+
+/* FILTER DD */
+
+.dd-wrapper {
+    width: 50%;
+    z-index: 10;
+    display: flex;
+    align-content: center;
+}
+
+.dd-header {
+    width: 30%;
+    height: 3.5vw;
+    margin-right: 2.4vw;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+    font-size: 1vw;
+}
+
+.dd-header-title {
+}
+
+.dd-arrows {
+}
+
+@media only screen and (max-width: 1000px)  {
+    .search-form {
+        height: 7vw;
+    }
+}
