@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
+import onClickOutside from 'react-onclickoutside';
 
 
 export class FilterDropdown extends Component {
@@ -48,4 +49,4 @@ export class FilterDropdown extends Component {
     }
 }
 
-export default FilterDropdown;
+export default onClickOutside(FilterDropdown);
