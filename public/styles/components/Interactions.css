@@ -131,3 +131,9 @@
         font-size: 1.5vw;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .interactions-container {
+        flex-direction: column;
+    }
+}

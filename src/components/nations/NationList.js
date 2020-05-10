@@ -58,7 +58,7 @@ export class NationList extends Component {
                         nationId={nation.callingCodes[0]}
                         />;
                     })}
-                    {this.state.error ? <h1 style={{paddingLeft: "2vw"}}>Sorry, we couldn't find any countries with that name</h1> : false}
+                    {this.state.error ? <h1 style={{paddingLeft: "2vw"}}>Sorry, we couldn't find any country with that name</h1> : false}
                 </div>
             </div>
         );
