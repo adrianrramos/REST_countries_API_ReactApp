@@ -88,6 +88,26 @@
 
 @media only screen and (max-width: 400px) {
     .cards-container {
-        grid-template-columns: auto;
+        grid-template-columns: none;
+        padding: 3vw;
+    }
+
+    .card-body {
+        width: 87%;
+        height: 110vw;
+    }
+
+    .card-image {
+        height: 50vw;
+    }
+
+    .card-title {
+        font-size: 8vw;
+        padding: 3vw;
+    }
+
+    .card-content-row {
+        font-size: 4vw;
+        padding: 3vw;
     }
 }
