@@ -99,7 +99,7 @@ const ShowInfo = ({
                         </li>
                     </ul>
                 </div>
-                <BordersDetail borders={borders} onBorderLinkClick={onBorderLinkClick}/>
+                <BordersDetail borders={borders}/>
             </div>
         </div>
     );

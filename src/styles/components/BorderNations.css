@@ -36,6 +36,10 @@
     border-radius: 5px;
 }
 
+.borderNat-item-box:hover {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 400px) {
     .borderNat-container {
         flex-direction: column;

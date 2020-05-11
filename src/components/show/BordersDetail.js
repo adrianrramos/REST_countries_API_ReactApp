@@ -21,10 +21,6 @@ export class BordersDetail extends Component {
         });
     };
 
-    handleBorderLink = () => {
-        this.props.onBorderLinkClick();
-    }
-
     render() {
         if (this.state.borders.length <= 0 ) {
             return <h4>No Bordering Nations</h4>
@@ -38,7 +34,7 @@ export class BordersDetail extends Component {
                 {
                     this.state.borders.map(border => {
                         return (
-                            <Link to={`/nation/${border}`} key={border} className="borderNat-link" onClick={() => this.handleBorderLink()}>
+                            <Link to={`/nation/${border}`} key={border} className="borderNat-link">
                                 <div className={`borderNat-item-box ${this.context.darkmode ? 'dark-element ' : ''}`}>
                                     <div className="borderNat-item">
                                         {border}
