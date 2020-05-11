@@ -35,3 +35,19 @@
     box-shadow: 1px 1px 25px hsl(0, 0%, 93%);
     border-radius: 5px;
 }
+
+@media only screen and (max-width: 400px) {
+    .borderNat-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .borderNat-container h4 {
+        width: 100%;
+    }
+
+    .borderNat-list {
+        height: 5vw;
+        margin-bottom: 10vw;
+    }
+}

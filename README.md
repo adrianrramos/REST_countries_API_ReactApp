@@ -6,9 +6,7 @@
 
 Thanks for checking out this front-end coding project.
 
-The design reference was provided to me by [Frontend Mentor](https://www.frontendmentor.io) , which hostse challenges that allow you to improve your skills in a real-life workflow.
-
-**To do this challenge, you need a good understanding of JavaScript.**
+The design reference was provided to me by [Frontend Mentor](https://www.frontendmentor.io) , a site that hosts challenges that allow you to improve your skills in a real-life workflow.
 
 ## The Objective
 
@@ -20,10 +18,7 @@ Users should be able to:
 - Search for a country using an `input` field
 - Filter countries by region
 - Click on a country to see more detailed information on a separate page
-- Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
-
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+- Toggle the color scheme between light and dark mode
 
 ## What I learned
 

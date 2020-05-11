@@ -65,3 +65,34 @@ body {
 .list-item-label {
     margin-right: .5vw;
 }
+
+@media only screen and (max-width: 400px) {
+    .goback-btn{
+        height: 13vw;
+        width: 35vw;
+    }
+
+    .showpage-body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3vw;
+    }
+
+    .show-flag {
+        width: 100%;
+    }
+
+    .nation-flag {
+        width: 90%;
+        height: auto;
+    }
+
+    .nation-desc-box {
+        flex-direction: column;
+    }
+
+    .nation-list {
+        width: 100%;
+    }
+}
