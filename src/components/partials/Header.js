@@ -3,6 +3,7 @@ import '../../styles/components/Header.css';
 import '../../styles/darkMode.css'
 
 import DarkModeContext from '../../contexts/DarkModeContext';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     static contextType = DarkModeContext;
@@ -11,9 +12,11 @@ class Header extends Component {
         return (
             <div className={`header-container ${this.context.darkmode ? 'dark-element ' : ''}`}>
                 <div className="header-title-box">
-                    <h1 className="header-title">
-                        Where in the world?
-                    </h1>
+                    <Link to="/" id="header-link">
+                        <h1 className="header-title">
+                            Where in the world?
+                        </h1>
+                    </Link>
                 </div>
                 <div className="darkmode-box" onClick={() => this.context.onDarkModeToggle()}>
                     {

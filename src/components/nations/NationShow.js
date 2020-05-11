@@ -69,12 +69,12 @@ export class NationShow extends Component {
         } = this.state.nation;
         return (
             <div className={`"showPage-container ${this.context.darkmode ? 'dark-body add-height' : ''}`}>
-                    <div className={`back-btn-box ${this.context.darkmode ? 'dark-element' : ''}`}>
-                <Link to="/" className="goback-btn">
+                <div className={`back-btn-box ${this.context.darkmode ? 'dark-bg' : ''}`}>
+                    <Link to="/" className={`goback-btn ${this.context.darkmode ? 'dark-element' : ''}`}>
                         <i className="fas fa-arrow-left"></i>
                         Back
-                </Link>
-                    </div>
+                    </Link>
+                </div>
                 <ShowInfo 
                     flag={flag}
                     name={name}

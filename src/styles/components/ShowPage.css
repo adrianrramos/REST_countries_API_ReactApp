@@ -9,8 +9,12 @@ body {
 }
 
 .back-btn-box {
+    padding-top: 3vw;
+}
+
+.goback-btn {
     background-color: white;
-    margin: 3vw 0 3vw 0;
+    margin: 0 0 3vw 2.5vw;
     height: 2.5vw;
     width: 9vw;
     display: flex;
@@ -18,18 +22,8 @@ body {
     align-items: center;
     box-shadow: 1px 1px 25px hsl(0, 0%, 93%);
     border-radius: 5px;
-}
-
-.back-btn-box:hover {
-    cursor: pointer;
-}
-
-.goback-btn {
-    left: 0;
-    text-decoration: none;
     font-weight: 800;
-    height: 2.5vw;
-    width: 9vw;
+    text-decoration: none;
     color: inherit;
 }
 
