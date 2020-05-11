@@ -8,7 +8,30 @@ body {
     padding: 0 2.5vw 0 2.5vw;
 }
 
+.back-btn-box {
+    background-color: white;
+    margin: 3vw 0 3vw 0;
+    height: 2.5vw;
+    width: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 25px hsl(0, 0%, 93%);
+    border-radius: 5px;
+}
+
+.back-btn-box:hover {
+    cursor: pointer;
+}
+
 .goback-btn {
+    left: 0;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.fa-arrow-left {
+    margin-right: 20px;
 }
 
 .showpage-body {
@@ -18,10 +41,30 @@ body {
 .show-flag {
     width: 50%;
     display: flex;
+    justify-content: center;
 }
 
+.nation-flag {
+    width: 30vw;
+    height: auto;
+    align-self: center;
+}
 
 
 .show-info-text {
     width: 50%;
+}
+
+.nation-desc-box {
+    display: flex;
+}
+
+.nation-list {
+    width: 50%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-item-label {
+    margin-right: .5vw;
 }

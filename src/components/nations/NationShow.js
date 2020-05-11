@@ -56,9 +56,12 @@ export class NationShow extends Component {
 
         return (
             <div className="showPage-container">
-                <Link to="/" className="goback-btn">
-                    Go Back
-                </Link>
+                <div className="back-btn-box">
+                    <Link to="/" className="goback-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back
+                    </Link>
+                </div>
                 <ShowInfo 
                     flag={flag}
                     name={name}
