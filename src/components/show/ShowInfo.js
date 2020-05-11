@@ -13,7 +13,8 @@ const ShowInfo = ({
     topLevelDomain,
     currencies,
     languages,
-    borders
+    borders,
+    onBorderLinkClick
 }) => {
     return (
         <div className="showpage-body">
@@ -92,7 +93,7 @@ const ShowInfo = ({
                         </li>
                     </ul>
                 </div>
-                <BordersDetail borders={borders}/>
+                <BordersDetail borders={borders} onBorderLinkClick={onBorderLinkClick}/>
             </div>
         </div>
     );

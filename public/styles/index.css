@@ -2,10 +2,6 @@
 @import './components/Interactions.css';
 @import './components/Header.css';
 
-* {
-    border: .5px solid black;
-}
-
 body {
     background-color: hsl(0, 0%, 98%);
     font-family: 'Nunito Sans', sans-serif;

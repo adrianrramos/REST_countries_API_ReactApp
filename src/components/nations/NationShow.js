@@ -8,11 +8,20 @@ export class NationShow extends Component {
     state = {}
 
     componentDidMount() {
+        
         const { name } = this.props.match.params;
 
         nations.get(`name/${name}`)
             .then(response => this.setState({ nation: response.data[0] }))
             .catch(error => console.log(error));
+    };
+
+    onBorderLinkClick = () => {
+        // const { name } = this.props.match.params;
+
+        // nations.get(`name/${name}`)
+        //     .then(response => this.setState({ nation: response.data[0] }))
+        //     .catch(error => console.log(error));
     };
 
     renderLanguages = (languages) => {
@@ -53,15 +62,14 @@ export class NationShow extends Component {
             languages,
             borders
         } = this.state.nation;
-
         return (
             <div className="showPage-container">
-                <div className="back-btn-box">
-                    <Link to="/" className="goback-btn">
-                    <i class="fas fa-arrow-left"></i>
-                    Back
-                    </Link>
-                </div>
+                <Link to="/" className="goback-btn">
+                    <div className="back-btn-box">
+                        <i className="fas fa-arrow-left"></i>
+                        Back
+                    </div>
+                </Link>
                 <ShowInfo 
                     flag={flag}
                     name={name}
@@ -74,6 +82,7 @@ export class NationShow extends Component {
                     currencies={this.renderCurrencies(currencies)}
                     languages={this.renderLanguages(languages)}
                     borders={borders}
+                    onBorderLinkClick={this.onBorderLinkClick}
                 />
             </div>
         )

@@ -1,0 +1,37 @@
+.borderNat-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: auto;
+}
+
+.borderNat-container {
+    display: flex;
+    align-items: center;
+}
+
+.borderNat-container h4 {
+    width: 16%;
+}
+
+.borderNat-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.borderNat-list > * {
+    margin: .2vw 0;
+}
+
+.borderNat-item-box {
+    margin-right: 1vw;
+    background-color: white;
+    height: 2vw;
+    width: auto;
+    padding: 0 1vw 0 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 25px hsl(0, 0%, 93%);
+    border-radius: 5px;
+}
