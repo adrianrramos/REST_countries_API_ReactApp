@@ -1,5 +1,6 @@
 import React from 'react';
 import BordersDetail from './BordersDetail';
+import '../../styles/components/ShowPage.css'
 
 const ShowInfo = ({
     flag,
@@ -15,85 +16,83 @@ const ShowInfo = ({
     borders
 }) => {
     return (
-        <div>
-            <div>
-                <div>
-                    <img src={flag} alt={name}></img>
+        <div className="showpage-body">
+            <div className="show-flag">
+                <img src={flag} alt={name} className="nation-flag"></img>
+            </div>
+            <div className="show-info-text">
+                <h1 className="nation-name">{name}</h1>
+                <div className="nation-desc-box">
+                    <ul className="nation-list">
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Native Name:
+                                </strong>
+                                {nativeName}
+                            </p>
+                        </li>
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Population:
+                                </strong>
+                                {population}
+                            </p>
+                        </li>
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Region:
+                                </strong>
+                                {region}
+                            </p>
+                        </li>
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Sub Region:
+                                </strong>
+                                {subregion}
+                            </p>
+                        </li>
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Capital:
+                                </strong>
+                                {capital}
+                            </p>
+                        </li>
+                    </ul>
+                    <ul className="nation-list">
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Top Level Domain:
+                                </strong>
+                                {topLevelDomain}
+                            </p>
+                        </li>
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Currencies:
+                                </strong>
+                                {currencies}
+                            </p>
+                        </li>
+                        <li className="nation-list-item">
+                            <p className="list-item-text">
+                                <strong className="list-item-label">
+                                    Languages:
+                                </strong>
+                                {languages}
+                            </p>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                    <h1>{name}</h1>
-                    <div>
-                        <ul>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Native Name:
-                                    </strong>
-                                    {nativeName}
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Population:
-                                    </strong>
-                                    {population}
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Region:
-                                    </strong>
-                                    {region}
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Sub Region:
-                                    </strong>
-                                    {subregion}
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Capital:
-                                    </strong>
-                                    {capital}
-                                </p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Top Level Domain:
-                                    </strong>
-                                    {topLevelDomain}
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Currencies:
-                                    </strong>
-                                    {currencies}
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>
-                                        Languages:
-                                    </strong>
-                                    {languages}
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <BordersDetail borders={borders}/>
-                </div>
+                <BordersDetail borders={borders}/>
             </div>
         </div>
     );

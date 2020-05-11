@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import nations from '../../apis/nations';
 import { Link } from 'react-router-dom';
 import ShowInfo from '../show/ShowInfo';
+import '../../styles/components/ShowPage.css';
 
 export class NationShow extends Component {
     state = {}

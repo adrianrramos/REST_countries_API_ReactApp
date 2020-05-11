@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
 import onClickOutside from 'react-onclickoutside';
+import '../../styles/components/Interactions.css';
 
 
 export class FilterDropdown extends Component {

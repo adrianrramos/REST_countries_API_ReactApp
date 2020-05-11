@@ -3,6 +3,10 @@
 @import './components/Header.css';
 @import './components/ShowPage.css';
 
+* {
+    border: .5px solid black;
+}
+
 body {
     background-color: hsl(0, 0%, 98%);
     font-family: 'Nunito Sans', sans-serif;

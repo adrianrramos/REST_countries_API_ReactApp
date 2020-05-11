@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../../styles/components/Interactions.css';
 
 export class SearchBar extends Component {
     state = {

@@ -1,0 +1,28 @@
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+
+.showPage-container {
+    padding: 0 3vw 0 90vw;
+}
+
+.goback-btn {
+    padding-left: 20vw;
+}
+
+.showpage-body {
+    display: flex;
+}
+
+.show-flag {
+    width: 50%;
+    display: flex;
+}
+
+
+
+.show-info-text {
+    width: 50%;
+}
