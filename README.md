@@ -1,6 +1,6 @@
-# Frontend Mentor - REST Countries API with color theme switcher
+# Frontend Mentor - REST Countries API project
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](./public/desktop-preview.jpg)
+![Design preview for the REST Countries API with color theme switcher coding challenge](./public/desktop-video.gif)
 
 ## Welcome! 👋
 
@@ -35,6 +35,6 @@ These improvements are some the following:
 
 Lastly this project has given me more hours to work with React code, solving/debugging issues, and loading data from a RESTful API.
 
-![](./public/desktop-video.gif)
-
 ![](./public/mobile-video.gif)
+
+![](./public/desktop-preview.jpg)
