@@ -46,8 +46,8 @@
         width: 100%;
     }
 
-    .borderNat-list {
-        height: 5vw;
-        margin-bottom: 10vw;
+    .borderNat-item-box {
+        height: 7vw;
+        margin-bottom: 1vw;
     }
 }

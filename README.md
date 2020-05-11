@@ -34,3 +34,7 @@ These improvements are some the following:
 - Planning out and executing an application build (this is the biggest App I have built alone, thus far)
 
 Lastly this project has given me more hours to work with React code, solving/debugging issues, and loading data from a RESTful API.
+
+![](./public/desktop-video.gif)
+
+![](./public/mobile-video.gif)
