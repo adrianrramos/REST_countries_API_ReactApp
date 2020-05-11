@@ -4,11 +4,16 @@ import nations from '../../apis/nations';
 import SearchBar from '../index/SearchBar';
 import FilterDropdown from '../dropdown/FilterDropdown';
 import Card from '../index/Card';
+import '../../styles/darkMode.css'
+
+import DarkModeContext from '../../contexts/DarkModeContext';
 
 export class NationList extends Component {
     state = {
         term: ''
     };
+
+    static contextType = DarkModeContext;
 
     componentDidMount = async () => {
         const response = await nations.get('all');
@@ -36,7 +41,7 @@ export class NationList extends Component {
     render() {
 
         return (
-            <div className="main-container">
+            <div className={`main-container ${this.context.darkmode ? 'dark-body ' : ''}`}>
                 <div className="interactions-container">
                     <SearchBar onTermSubmit={this.onTermSubmit}/>
                     <FilterDropdown 

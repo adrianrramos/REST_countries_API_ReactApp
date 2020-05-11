@@ -3,9 +3,14 @@ import nations from '../../apis/nations';
 import { Link } from 'react-router-dom';
 import ShowInfo from '../show/ShowInfo';
 import '../../styles/components/ShowPage.css';
+import '../../styles/darkMode.css'
+
+import DarkModeContext from '../../contexts/DarkModeContext';
 
 export class NationShow extends Component {
     state = {}
+
+    static contextType = DarkModeContext;
 
     componentDidMount() {
         
@@ -63,13 +68,13 @@ export class NationShow extends Component {
             borders
         } = this.state.nation;
         return (
-            <div className="showPage-container">
+            <div className={`"showPage-container ${this.context.darkmode ? 'dark-body add-height' : ''}`}>
+                    <div className={`back-btn-box ${this.context.darkmode ? 'dark-element' : ''}`}>
                 <Link to="/" className="goback-btn">
-                    <div className="back-btn-box">
                         <i className="fas fa-arrow-left"></i>
                         Back
-                    </div>
                 </Link>
+                    </div>
                 <ShowInfo 
                     flag={flag}
                     name={name}

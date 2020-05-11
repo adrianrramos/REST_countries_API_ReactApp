@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+.main-container {
+    padding-top: 2.5vw;
+}
+
+
 .cards-container {
     width: 100%;
     display: grid;

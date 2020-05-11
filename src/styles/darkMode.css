@@ -1,0 +1,18 @@
+.dark-element {
+    background-color:hsl(209, 23%, 22%) !important;
+    color: white !important;
+    box-shadow: 1px 1px 25px hsl(207, 26%, 10%) !important;
+}
+
+.dark-element-ns {
+    background-color:hsl(209, 23%, 22%) !important;
+    color: white !important;
+}
+
+.dark-body {
+    background-color: hsl(207, 26%, 17%) !important;
+}
+
+.add-height {
+    height: 100vh;
+}

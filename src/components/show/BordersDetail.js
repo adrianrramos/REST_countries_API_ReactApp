@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import nations from '../../apis/nations';
 import { Link } from 'react-router-dom';
 import '../../styles/components/BorderNations.css';
+import '../../styles/darkMode.css'
+
+import DarkModeContext from '../../contexts/DarkModeContext';
 
 export class BordersDetail extends Component {
     state = {
         borders: []
     }
+
+    static contextType = DarkModeContext;
 
     componentDidMount() {
         this.props.borders.forEach(border => {
@@ -34,7 +39,7 @@ export class BordersDetail extends Component {
                     this.state.borders.map(border => {
                         return (
                             <Link to={`/nation/${border}`} key={border} className="borderNat-link" onClick={() => this.handleBorderLink()}>
-                                <div className="borderNat-item-box">
+                                <div className={`borderNat-item-box ${this.context.darkmode ? 'dark-element ' : ''}`}>
                                     <div className="borderNat-item">
                                         {border}
                                     </div>

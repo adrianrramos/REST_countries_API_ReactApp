@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../../styles/components/Header.css';
+import '../../styles/darkMode.css'
 
-const Header = () => {
-    return (
-        <div className="header-container">
-            <div className="header-title-box">
-                <h1 className="header-title">
-                    Where in the world?
-                </h1>
+import DarkModeContext from '../../contexts/DarkModeContext';
+
+class Header extends Component {
+    static contextType = DarkModeContext;
+
+    render() {
+        return (
+            <div className={`header-container ${this.context.darkmode ? 'dark-element ' : ''}`}>
+                <div className="header-title-box">
+                    <h1 className="header-title">
+                        Where in the world?
+                    </h1>
+                </div>
+                <div className="darkmode-box" onClick={() => this.context.onDarkModeToggle()}>
+                    {
+                        this.context.darkmode
+                        ? <i className="fas fa-moon"></i>
+                        : <i className="far fa-moon"></i>
+                    }
+                    <p className="darkmode-text">
+                        Dark Mode
+                    </p>
+                </div>
             </div>
-            <div className="darkmode-box">
-                {
-                    true // TODO add state for darkmode 
-                    ? <i className="far fa-moon"></i>
-                    : <i className="fas fa-moon"></i>
-                }
-                <p className="darkmode-text">
-                    Dark Mode
-                </p>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
-export default Header
+export default Header;

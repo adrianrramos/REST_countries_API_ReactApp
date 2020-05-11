@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import BordersDetail from './BordersDetail';
-import '../../styles/components/ShowPage.css'
+import '../../styles/components/ShowPage.css';
+import '../../styles/darkMode.css';
+
+import DarkModeContext from '../../contexts/DarkModeContext';
 
 const ShowInfo = ({
     flag,
@@ -16,8 +19,11 @@ const ShowInfo = ({
     borders,
     onBorderLinkClick
 }) => {
+
+    const context = useContext(DarkModeContext);
+
     return (
-        <div className="showpage-body">
+        <div className="showpage-body" style={{color: context.darkmode ? 'white' : ''}}>
             <div className="show-flag">
                 <img src={flag} alt={name} className="nation-flag"></img>
             </div>

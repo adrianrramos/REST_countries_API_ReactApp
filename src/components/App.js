@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
-import { Router, Route } from 'react-router';
-import history from '../history';
+import { Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
 import NationList from './nations/NationList';
 import NationShow from './nations/NationShow';
 import Header from './partials/Header';
 import '../styles/darkMode.css'
 
+import { DarkModeStore } from '../contexts/DarkModeContext';
+
 export class App extends Component {
+
     render() {
         return (
-            <Router history={history}>
-                <Header />
-                <Route path="/" component={NationList}  exact/>
-                <Route path="/nation/:name" component={NationShow}  exact/>
-            </Router>
+            <BrowserRouter>
+                <DarkModeStore>
+                    <Header />
+                    <Route path="/" component={NationList}  exact/>
+                    <Route path="/nation/:name" component={NationShow}  exact/>
+                </DarkModeStore>
+            </BrowserRouter>
         )
     }
 }

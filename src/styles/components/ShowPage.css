@@ -28,6 +28,9 @@ body {
     left: 0;
     text-decoration: none;
     font-weight: 800;
+    height: 2.5vw;
+    width: 9vw;
+    color: inherit;
 }
 
 .fa-arrow-left {

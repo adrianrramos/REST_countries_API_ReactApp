@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 2vw 0 2vw;
-    margin-bottom: 2.5vw;
+    margin-bottom: 0;
     background-color: white;
     box-shadow: 1px 1px 10px hsl(0, 0%, 90%);
 }
@@ -16,6 +16,10 @@ body {
 .darkmode-box {
     display: flex;
     font-weight: 600;
+}
+
+.darkmode-box:hover {
+    cursor: pointer;
 }
 
 .fa-moon {

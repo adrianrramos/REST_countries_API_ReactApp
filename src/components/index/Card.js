@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/components/Card.css';
+import '../../styles/darkMode.css'
+
+import DarkModeContext from '../../contexts/DarkModeContext';
 
 const Card = ({
     flag,
@@ -10,8 +13,11 @@ const Card = ({
     capital,
     nationId
 }) => {
+    
+    const context = useContext(DarkModeContext)
+
     return (
-        <div className="card-body">
+        <div className={`card-body ${context.darkmode ? 'dark-element' : '' }`}>
             <img 
                 className="card-image"
                 src={flag} 
