@@ -5,6 +5,7 @@ import history from '../history';
 import NationList from './nations/NationList';
 import NationShow from './nations/NationShow';
 import Header from './partials/Header';
+import '../styles/darkMode.css'
 
 export class App extends Component {
     render() {
