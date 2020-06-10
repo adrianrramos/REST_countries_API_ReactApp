@@ -22,9 +22,9 @@ Users should be able to:
 
 ## What I learned
 
-A lot of road blocks where met during the course of building out this project, however these weaknesses have got a boost in improvement and has given me more confidence as a Junior Front-End Developer.
+A lot of road blocks where met during the course of building out this project, however these weaknesses have got a boost in improvement and has given me more confidence as a Front-End Developer.
 
-These improvements are some the following:
+Areas I grew in with this project:
 
 - Using React with a RESTful API
 - Using React with CSS styles
